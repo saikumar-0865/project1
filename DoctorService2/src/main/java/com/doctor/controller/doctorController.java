@@ -105,8 +105,8 @@ public class doctorController {
 	
 	
 	
-	@GetMapping("patient/{patientId}")
-	public List<Comments> getCommentsByPatientId(@PathVariable Long patientId){
+	@PostMapping("/commentsbypatientid")
+	public List<Comments> getCommentsByPatientId(@RequestBody Long patientId){
 		
 		return commentsService.getCommentsByPatientId(patientId);
 	}
